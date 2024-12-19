@@ -1,0 +1,5 @@
+mysql:
+	docker run --name mysql -e Mysql_USER=root -e Mysql_PASSWORD=1234 -p 3306:3306 -d Mysql:latest
+server:
+	go run ./main.go
+.PHONY: run,mysql

@@ -46,7 +46,7 @@ func createLogFile(logFilePath, filenameFormat string) *os.File {
 func getLogger() (*logrus.Logger, func()) {
 	logFilePath := ""
 	if dir, err := os.Getwd(); err == nil {
-		logFilePath = dir + "\\logs\\"
+		logFilePath = dir + "/logs/"
 	}
 	// 创建日志文件夹
 	createFolder(logFilePath)
